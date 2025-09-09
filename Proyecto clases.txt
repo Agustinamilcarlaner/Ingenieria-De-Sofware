@@ -1,5 +1,10 @@
 objetivo: centralizar y simplificar la informacion
 
+
+
+
+//////////////////////////////////////////////////////////////////////
+
 Class Estudiante:
 
 ID_Alumno (clave única)
@@ -20,17 +25,19 @@ Correo electrónico
 
 Condición académica: Ingresante / Avanzado (enumeration)
 
-// Pensar si son necesarias 
+MATERIAS QUE CURSA (RELACION CON CLASS MATERIA)
 
-Año de ingreso a la carrera
+{{{{{{ MATERIAS QUE PUEDE CURSAR SEGUN SU PLAN 
 
-Materias en curso / aprobadas
+MATERIAS QUE PUEDE CUSAR SEGUN LAS CORRELATIVAS QUE TIENE APORBADAS }}}}}}
 
-//////////////////////////////////////////////////////
+NOTAS FINAL DE CADA MATERIA (PUEDE SER UNA CLASE ASOCIACION)
+
+///////////////////////////////////////////////////////////////////
 
 Class Profesor:
 
-D_Profesor (clave única)
+ID_Profesor (clave única)
 
 Nombre
 
@@ -46,11 +53,13 @@ Correo electrónico
 
 Título académico / especialidad
 
-// Pensar si es necesaria
+MATERIA QUE DICTAN (RELACION CON CLASS MATERIA)
 
-(Opcional) Antigüedad en la institución
+Antiguedad en la universidad (periodo academico)
 
-///////////////////////////////////////////////////
+Rol en la universidad (Responsables de catedra, jefes de trabajos practicos o ayudantes)
+
+///////////////////////////////////////////////////////////////////
 
 Class Materia
 
@@ -62,15 +71,14 @@ Código de la materia
 
 Año / nivel en que se cursa (1ro, 2do, etc.)
 
-Profesor asignado (relación con Class Profesor)
+Profesor asignado (RELACION CON CLASS PROFESOR)
 
 Carga horaria (horas semanales o totales)
 
-Plan de Estudio al que pertenece (Relacion con Class Plan_de_Estudio)
+PLAN DE ESTUDIO A LA QUE PERTENECE (RELACION CON PLAN_DE_ESTUDIO)
 
-// Pensar si es necesaria
 
-(Opcional) Correlatividades (materias previas necesarias)
+MATERIAS CORRELATIVAS (RELACION CON CLASS CORRELATIVAS)
 
 ///////////////////////////////////////////////////////////////
 
@@ -88,7 +96,7 @@ Duración teórica
 
 (Opcional) Modalidad (presencial, virtual, híbrida)
 
-//////////////////////////////////////////////////////////////////7
+//////////////////////////////////////////////////////////////////
 
 Class Plan_de_Estudio
 
@@ -116,7 +124,76 @@ Aprobada (ej: para cursar Programación II hay que aprobar Programación I)
 
 Regularizada (ej: para cursar Física II basta con tener regularizada Física I)
 
-////////////////////////////////////////////////////////////////////////////7
+////////////////////////////////////////////////////////////////////////////
 
 
+Herramienta para saber el progreso de cada estudiante, se me viene la idea de hacer un promedio de notas en general de todas las materias que lleva hechas o cursadas
 
+principales usuarios:
+
+para consultar informacion:
+    El Personal oficina de alumnos:
+        asdministradores
+        estudiantes
+
+para cargar notas o consultar listados de alumnos
+    profesores
+        
+
+
+a Oficina de Alumnos de la Universidad necesita reemplazar un esquema actual de gestión basado en planillas y sistemas aislados por una plataforma centralizada que unifique la información académica de estudiantes, profesores, carreras y materias.
+
+Los principales desafíos del sistema son:
+
+Gestión integral de estudiantes: registrar datos personales, estado académico (ingresante/avanzado), materias cursadas, aprobadas y sus calificaciones finales.
+
+Gestión de docentes: registrar su información, asignarlos a materias en un período académico y diferenciar sus roles (responsable de cátedra, jefe de TP, ayudante).
+
+Oferta académica: cargar carreras, planes de estudio y materias, incluyendo correlatividades, para validar automáticamente si un estudiante cumple requisitos al inscribirse.
+
+Seguimiento académico: monitorear el progreso de los estudiantes para detectar riesgos de abandono o, en el futuro, recomendar programas especiales.
+
+Multiactor: ofrecer distintas funcionalidades según el usuario (oficina de alumnos, docentes, estudiantes).
+
+En síntesis, el sistema debe ser una plataforma académica centralizada, con control de reglas de negocio (correlatividades, inscripciones, roles docentes) y con capacidad de consulta y seguimiento.
+
+Actores del sistema
+1. Administradores (Oficina de Alumnos)
+
+Rol: usuarios principales del sistema.
+
+Funciones:
+
+Registrar y actualizar datos de estudiantes y docentes.
+
+Cargar carreras, planes de estudio, materias y correlatividades.
+
+Gestionar inscripciones y asignaciones de docentes.
+
+Generar reportes de avance académico.
+
+2. Estudiantes
+
+Rol: usuarios secundarios, con acceso a su información académica.
+
+Funciones:
+
+Consultar sus datos personales, materias cursadas y aprobadas.
+
+Inscribirse en materias, validando correlatividades automáticamente.
+
+Visualizar sus calificaciones finales.
+
+Consultar su progreso dentro del plan de estudio.
+
+3. Profesores
+
+Rol: usuarios secundarios, vinculados a materias y roles docentes.
+
+Funciones:
+
+Consultar las materias a su cargo y listados de alumnos inscriptos.
+
+Cargar y actualizar notas finales.
+
+Visualizar su asignación según período académico y rol docente.

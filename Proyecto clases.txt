@@ -1,0 +1,122 @@
+objetivo: centralizar y simplificar la informacion
+
+Class Estudiante:
+
+ID_Alumno (clave única)
+
+Nombre
+
+Apellido
+
+DNI
+
+Fecha de nacimiento
+
+Dirección
+
+Teléfono
+
+Correo electrónico
+
+Condición académica: Ingresante / Avanzado (enumeration)
+
+// Pensar si son necesarias 
+
+Año de ingreso a la carrera
+
+Materias en curso / aprobadas
+
+//////////////////////////////////////////////////////
+
+Class Profesor:
+
+D_Profesor (clave única)
+
+Nombre
+
+Apellido
+
+DNI / Documento
+
+Fecha de nacimiento
+
+Teléfono
+
+Correo electrónico
+
+Título académico / especialidad
+
+// Pensar si es necesaria
+
+(Opcional) Antigüedad en la institución
+
+///////////////////////////////////////////////////
+
+Class Materia
+
+ID_Materia (clave única)
+
+Nombre de la materia
+
+Código de la materia
+
+Año / nivel en que se cursa (1ro, 2do, etc.)
+
+Profesor asignado (relación con Class Profesor)
+
+Carga horaria (horas semanales o totales)
+
+Plan de Estudio al que pertenece (Relacion con Class Plan_de_Estudio)
+
+// Pensar si es necesaria
+
+(Opcional) Correlatividades (materias previas necesarias)
+
+///////////////////////////////////////////////////////////////
+
+Class Carrera
+
+ID_Carrera (clave única)
+
+Nombre de la carrera 
+
+Título otorgado 
+
+Duración teórica 
+
+// Ver si es necesaria
+
+(Opcional) Modalidad (presencial, virtual, híbrida)
+
+//////////////////////////////////////////////////////////////////7
+
+Class Plan_de_Estudio
+
+ID_Plan (clave única)
+
+Año de vigencia (ej: 2020, 2023, etc.)
+
+Resolución / normativa que lo aprueba
+
+Relación con Carrera (cada carrera puede tener varios planes a lo largo del tiempo)
+
+/////////////////////////////////////////////////////////////////////
+
+Class Correlatividades 
+
+ID_Correlatividad (clave única)
+
+Materia origen (la que exige el requisito)
+
+Materia destino (la que necesita tener aprobada, osea la anterior)
+
+Tipo_de_equisito:
+
+Aprobada (ej: para cursar Programación II hay que aprobar Programación I)
+
+Regularizada (ej: para cursar Física II basta con tener regularizada Física I)
+
+////////////////////////////////////////////////////////////////////////////7
+
+
+

@@ -118,7 +118,7 @@ Materia origen (la que exige el requisito)
 
 Materia destino (la que necesita tener aprobada, osea la anterior)
 
-Tipo_de_equisito:
+Tipo_de_Requisito:
 
 Aprobada (ej: para cursar Programación II hay que aprobar Programación I)
 

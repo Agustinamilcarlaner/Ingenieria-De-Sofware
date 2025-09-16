@@ -1,4 +1,4 @@
-Actvidad 1: 
+Actividad 1: 
 Análisis del enunciado y actores: Presenten un breve resumen de cómo
 interpretaron la narrativa y los principales desafíos que el sistema debe
 abordar. Además, identifiquen y describan los actores clave del sistema.o

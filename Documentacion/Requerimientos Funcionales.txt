@@ -1,0 +1,41 @@
+Requerimientos Funcionales:
+
+1.Gestión sobre estudiantes (alta, baja, modificación)
+
+2.Gestión de profesores (alta, baja, modificación)
+
+3.Gestión de materias (alta, baja, modificación)
+
+4.Gestión de carrera
+
+5.Gestión de plan de estudio
+
+6.Gestión de correlativas
+
+7.Registro de nota final de aprobación de cada materia
+
+8.Organización de profesores dependiendo del período
+
+9.Registro de responsabilidad de cada docente en cada una de sus materias dadas
+
+10.Gestión de programas especiales para alumnos con alto índice de progreso positivo
+
+11.Inscripción a materias con validación automática de correlativas
+
+12.Consulta de historial académico de los alumnos
+
+13.Listados/reportes
+
+####################################################################################################################################################
+
+Requerimientos No Funcionales:
+
+1.Alto rendimiento (que pueda contestar consultas rápido para los profesores, administradores y estudiantes)
+
+2.Seguridad (alta seguridad para proteger los datos de los alumnos y de profesores)
+
+3.Usabilidad
+
+4.Mantenibilidad
+
+5.Compatibilidad

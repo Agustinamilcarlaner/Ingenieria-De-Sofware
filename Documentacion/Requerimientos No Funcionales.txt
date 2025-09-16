@@ -1,0 +1,12 @@
+Requerimientos No Funcionales:
+
+1.Alto rendimiento (que pueda contestar consultas rápido para los profesores, administradores y estudiantes)
+
+2.Seguridad (alta seguridad para proteger los datos de los alumnos y de profesores)
+
+3.Usabilidad
+
+4.Mantenibilidad
+
+5.Compatibilidad
+
